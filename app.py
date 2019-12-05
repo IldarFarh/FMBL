@@ -4,8 +4,8 @@ from flask import Flask, request
 from pymessenger.bot import Bot
 
 app = Flask(__name__)
-ACCESS_TOKEN = 'EAAHFNk7ZBIn0BAAhyeVnyqVPjeV5BB3pCgU2Oi4lAw4CkiLGZBZBUPT6uZC16OiWcnOZBya5ZBMu33GdcFvcWUxK7QsCBVoYqzZAK0e0mjaKlOu0Senwn8WN0BON2WiVDto0q5aj3fgHKvrSOB1hPMYJmzZA3YrU9DszyWTZCXOZCYWwZDZD'
-VERIFY_TOKEN = 'SECRET'
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
 bot = Bot(ACCESS_TOKEN)
 
 @app.route('/', methods=['GET', 'POST'])
