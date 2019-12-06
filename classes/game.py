@@ -55,10 +55,11 @@ class Person:
 
     def choose_action(self):
         i = 1
-        print("Actions")
+        answer = {"title": "Actions"} 
         for item in self.actions:
-            print(str(i) + ":", item)
+            answer[i] = (str(i) + ":", item)
             i += 1
+        return answer
 
     def choose_magic(self):
         i = 1
