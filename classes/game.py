@@ -55,9 +55,13 @@ class Person:
 
     def choose_action(self):
         i = 1
-        answer = {"title": "Actions", "value":{}}
+        answer = {"text": "Choose from actions", "quick_replies":[]}
         for item in self.actions:
-            answer["value"][i] = (item)
+            answer["quick_replies"].append({
+                "content_type":"text",
+                "title":item,
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_"+item.capitalize() 
+            })
             i += 1
         print(answer)
         return answer
