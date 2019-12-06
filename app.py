@@ -8,7 +8,7 @@ def recieve_message():
         return 'This is python answering'
     else:
         output = request.get_json()
-        return output
+        return 'This is python answering'
 
 if __name__ == '__main__':
     app.run()
